@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <style type="text/css">
+            #bigfont { font-size: 20pt; }
+        </style>
+    </head>
+    <body>
+        <center>
+                <h1>당신이 입력한 텍스트는 {{ total }} 단어로 구성되어 있습니다.</h1><br>
+
+                <a href="{% url 'home' %}" id="bigfont">RESET</a><br><br>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" id="bigfont">입력한 텍스트</h3>
+                    </div>
+                    <div class="panel-body">
+                        {{ fulltext }}
+                    </div>
+                </div>                
+                <br><br>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" id="bigfont">단어 카운트</h3>
+                    </div>
+                    <div class="panel-body">
+                        {% for word, countTotal in dictionary %}
+                        {{ word }} = {{ countTotal }}<br>
+                        {% endfor %}
+                    </div>
+                </div>                
+        </center>        
+    </body>
+</html>
