@@ -18,7 +18,7 @@ Framework: Django
 ## Release History
 
 * 1.0.0
-    * first
+    * wordcount
     * 개발 완료
 
 ## Meta
