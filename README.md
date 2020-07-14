@@ -15,7 +15,7 @@
 
 ## Development setup
 
-Framework: Django
+Framework: Django2.2.14
 
 ## Release History
 
